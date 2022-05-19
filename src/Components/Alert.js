@@ -1,8 +1,9 @@
 import React from "react";
 
 function Alert(props) {
-  return (
-    props.alert && <>
+  return (<>
+    <div style={{height : '1rem'}}>
+    {props.alert &&
     <div className="container">
       <div
         className={`d-flex justify-content-center  alert alert-${props.alert.type} alert-dismissible fade show position-right`}
@@ -11,7 +12,7 @@ function Alert(props) {
         <strong> {props.alert.msg}</strong>
         
       </div>
-      </div>
+      </div>}</div>
     </>
   );
 }
